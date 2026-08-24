@@ -1,0 +1,13 @@
+[build]
+# Explicitly use Dockerfile so Railway doesn't auto-detect wrong builder
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+# /health responds instantly (before WhatsApp loads), so Railway marks deployment as success
+healthcheckPath = "/health"
+healthcheckTimeout = 120
+
+# Restart on failure (Chromium can crash occasionally)
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 5

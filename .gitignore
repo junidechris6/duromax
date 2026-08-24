@@ -1,0 +1,18 @@
+# Dependency directories
+node_modules/
+
+# WhatsApp session and browser cache files
+.wwebjs_auth/
+.wwebjs_cache/
+
+# Local database / leads excel file
+leads.xlsx
+
+# Local environment configuration (credentials/secrets)
+.env
+
+# Puppeteer cache
+.cache/
+
+# Nested duplicate folder prevention
+durointerior/
